@@ -8,12 +8,10 @@ public class Board {
 
     Cell[][] cells;
 
-    // Constructor to initialize the game board
     public Board() {
         initializeCells();
     }
 
-    // Initialize the cells array with Cell instances
     private void initializeCells() {
         cells = new Cell[GameMain.ROWS][GameMain.COLS];
         for (int row = 0; row < GameMain.ROWS; ++row) {
@@ -23,7 +21,6 @@ public class Board {
         }
     }
 
-    // Check if the game has ended in a draw
     public boolean isDraw() {
         for (int row = 0; row < GameMain.ROWS; ++row) {
             for (int col = 0; col < GameMain.COLS; ++col) {
@@ -35,7 +32,6 @@ public class Board {
         return true; // All cells are filled, indicating a draw
     }
 
-    // Check if the current player has won after making a move
     public boolean hasWon(Player thePlayer, int playerRow, int playerCol) {
         // Check if the player has 3 in that row
         if (cells[playerRow][0].content == thePlayer &&
@@ -73,7 +69,6 @@ public class Board {
         return false;
     }
 
-    // Draw the grid lines and call the paint method for each cell
     public void paint(Graphics g) {
         // Drawing the grid lines
         g.setColor(Color.gray);
