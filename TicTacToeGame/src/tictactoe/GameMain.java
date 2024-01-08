@@ -3,6 +3,10 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+/**
+ * The `GameMain` class represents the main UI and logic for the Tic-Tac-Toe game.
+ * It extends `JPanel` to create a graphical user interface with mouse input handling.
+ */
 public class GameMain extends JPanel implements MouseListener {
     // Constants for the Tic-Tac-Toe game
     public static final int ROWS = 3;
